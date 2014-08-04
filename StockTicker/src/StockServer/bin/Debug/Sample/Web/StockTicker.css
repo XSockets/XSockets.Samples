@@ -1,0 +1,50 @@
+﻿.up {
+    background-color: green;
+    color: black;
+    transition: all 0.5s;
+}
+
+.down {
+    background-color: red;
+    color: black;
+    transition: all 0.5s;
+}
+
+.zero {
+    background-color: white;
+    color: black;
+    transition: all 0.5s;
+}
+
+.down:before {
+  content: '▼';
+}
+
+.up:before {
+  content: '▲';
+}
+
+.zero:before {
+    content: '◄►'
+}
+
+.inactive {
+    background-color: gray;
+    color: black;
+    transition: all 0.5s;
+}
+
+.gray {
+    background-color: gray;
+    color: black;
+    transition: all 0.5s;
+}
+
+.green {
+    background-color: green;
+    color: black;
+    transition: all 0.5s;
+}
+
+input:invalid { border-color:red;}
+input:valid { border-color:green;}

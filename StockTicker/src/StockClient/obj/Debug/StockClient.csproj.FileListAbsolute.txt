@@ -1,0 +1,7 @@
+C:\Users\Uffe\Desktop\OwinStockTicker\StockClient\bin\Debug\StockClient.exe
+C:\Users\Uffe\Desktop\OwinStockTicker\StockClient\bin\Debug\StockClient.pdb
+C:\Users\Uffe\Desktop\OwinStockTicker\StockClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Uffe\Desktop\OwinStockTicker\StockClient\bin\Debug\XSockets.Client40.dll
+C:\Users\Uffe\Desktop\OwinStockTicker\StockClient\obj\Debug\StockClient.csprojResolveAssemblyReference.cache
+C:\Users\Uffe\Desktop\OwinStockTicker\StockClient\obj\Debug\StockClient.exe
+C:\Users\Uffe\Desktop\OwinStockTicker\StockClient\obj\Debug\StockClient.pdb
