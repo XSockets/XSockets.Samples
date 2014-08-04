@@ -5,3 +5,10 @@ C:\Users\Uffe\Desktop\OwinStockTicker\StockClient\bin\Debug\XSockets.Client40.dl
 C:\Users\Uffe\Desktop\OwinStockTicker\StockClient\obj\Debug\StockClient.csprojResolveAssemblyReference.cache
 C:\Users\Uffe\Desktop\OwinStockTicker\StockClient\obj\Debug\StockClient.exe
 C:\Users\Uffe\Desktop\OwinStockTicker\StockClient\obj\Debug\StockClient.pdb
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\obj\Debug\StockClient.exe
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\obj\Debug\StockClient.pdb
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\bin\Debug\StockClient.exe
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\bin\Debug\StockClient.pdb
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\bin\Debug\XSockets.Client40.dll
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\obj\Debug\StockClient.csprojResolveAssemblyReference.cache

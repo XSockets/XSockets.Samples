@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>XSockets.NET Stock Ticker</title>
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/XSockets.latest.beta.js"></script>    
+    <script src="js/knockout-2.2.1.js"></script>
+    <script src="StockTicker.js"></script>
+    <link href="StockTicker.css" rel="stylesheet" />
+
+    <script>
+        //ViewModel
+        var vm = null;
+        //Connection to XSockets
+        var conn = null;
+        //Shortcut to events constants
+        var evt = XSockets.Events;
+
+        $(function() {
+            //Create viewmodel
+            vm = new StockViewModel();
+
+            //Apply knockout bindings
+            ko.applyBindings(vm);
+
+            //Open connection to XSockets
+            conn = new XSockets.WebSocket('ws://localhost:12345', ['stock']);
+
+            //On open, do some bindings
+            conn.onconnected = function () {
+
+                //Listen for all stocks (published at bottom of open event)
+                conn.controller('stock').allstocks = function (stockList) {
+                    stockList.forEach(function (stock) {
+                        vm.AddOrUpdate(stock);
+                    });
+                };
+
+                conn.controller('stock').stock = function (stock) {
+                    vm.AddOrUpdate(stock);                    
+                };
+
+                //When a tick arrives, update or add the stock
+                conn.controller('stock').tick = function (stock) {
+                    vm.AddOrUpdate(stock);
+                };
+            };
+
+            $('#btn-addStock').bind('click', function (evt) {
+                
+                var s = $('#Symbol').val();
+                var p = $('#Price').val();
+
+                if (!$('#Symbol')[0].validity.valid) return;
+
+                console.log(s, p);
+
+                conn.controller('stock').invoke('addorupdatestock', { symbol: s, price: p });
+                $('#Symbol').val('');
+                $('#Price').val(500);
+            });
+        });
+
+        //Add or remove the stock from this clients subscriptions
+        var toggleStock = function (stock) {
+            if (stock.Active()) {
+                stock.Active(false);
+                vm.StockSubscriptions.remove(stock.Symbol);
+            }
+            else {
+                stock.Active(true);
+                vm.StockSubscriptions.push(stock.Symbol);
+            }
+            //Tell XSockets about the change
+            //Note that this will update the actual property on the controller without any method decalred being called
+            conn.controller('stock').setProperty('mystocks', vm.StockSubscriptions());           
+        };
+
+    </script>
+
+</head>
+<body>
+    <h1>XSockets.NET Stock Ticker Sample</h1>
+
+    <h2>Add/Change Stock</h2>
+    <div>
+        <input type="text" id="Symbol" required="required" title="Symbol" maxlength="4" pattern="[A-Za-z]{4}" placeholder="Symbol (4 chars)" />
+        <input type="number" id="Price" min="10" max="10000" value="500" step="10" />
+        <button id="btn-addStock">Add/Change Stock</button>
+    </div>
+
+    <h2>Live Stock Table</h2>
+    <table style="border: solid 1px black;">
+        <thead>
+            <tr>
+                <th colspan="5">&nbsp;</th>
+                <th colspan="2">Trend</th>
+                <th>&nbsp;</th>
+            </tr>
+            <tr>
+                <th>Symbol</th>
+                <th>Price</th>
+                <th>Open</th>
+                <th>High</th>
+                <th>Low</th>
+                <th>Change</th>
+                <th>%</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: Stocks">
+            <tr>
+                <td data-bind="text: Symbol"></td>
+                <td style="width: 80px;" data-bind="text: Price, css: DayTrend"></td>
+                <td style="width: 80px;" data-bind="text: DayOpen"></td>
+                <td style="width: 80px;" data-bind="text: DayHigh"></td>
+                <td style="width: 80px;" data-bind="text: DayLow"></td>
+                <td style="width: 100px;" data-bind="text: Change, css: Trend"></td>
+                <td style="width: 100px;" data-bind="text: Percent, css: Trend"></td>
+                <td>
+                    <button data-bind="css: ToggleState, click: function () { toggleStock($data); }, text: ToggleText"></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

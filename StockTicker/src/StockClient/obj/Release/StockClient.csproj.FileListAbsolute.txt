@@ -1,0 +1,6 @@
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\bin\Release\StockClient.exe
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\bin\Release\StockClient.pdb
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\bin\Release\Newtonsoft.Json.dll
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\bin\Release\XSockets.Client40.dll
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\obj\Release\StockClient.exe
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\obj\Release\StockClient.pdb

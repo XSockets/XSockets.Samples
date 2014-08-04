@@ -27,9 +27,7 @@ namespace StockClient
             c.Controller("stock").On<Stock>("tick", s =>
             {
                 Console.WriteLine("{0}:{1}",s.Symbol, s.Price);
-            });
-            
-            
+            });                       
             
             Console.ReadLine();
         }
