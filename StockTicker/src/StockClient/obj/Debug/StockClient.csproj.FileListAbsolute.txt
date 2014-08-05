@@ -11,4 +11,3 @@ C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\bin\
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\bin\Debug\StockClient.pdb
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\bin\Debug\XSockets.Client40.dll
-C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockClient\obj\Debug\StockClient.csprojResolveAssemblyReference.cache

@@ -1,3 +1,3 @@
 ## XSockets.Samples
 
-This repository contains various samples based on XSockets.NET 4.*
+This repository contains various samples (and experiments) based on XSockets.NET 4.*
