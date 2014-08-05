@@ -1,7 +1,7 @@
 
 #XSockets.NET - WebRTC
 
-This repo contains the full source code of the [XSockets.NET][1]  WebRTC 
+This repo contains the full source code of XSockets.NET WebRTC 
 
 ##Pre-Req
 
