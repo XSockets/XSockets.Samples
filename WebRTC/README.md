@@ -7,31 +7,6 @@ This repo contains the full source code of the [XSockets.NET][1]  WebRTC
 
 In order to be able to use the XSockets.NET Broker and the WebRTC JavaScript API's of ours. You need to install XSockets.NET into your application. Since you are going to have a web-application we recomend you to use MVC, but it is up to you.
 
-Install XSockets.NET Realtime framework into your Visual Studio solution by using the [Nuget][2] package. 
-
-Open the Package Manager console and type the following command.
-
-    PM> Install-Package XSockets.Sample.WebRTC
-
-##Testing WebRTC
-When installation is completed just follow these steps
-
- 1. Under WebRTCSample\Client right click on index.html and select "set as startpage"
- 2. Right click the project and select properties.
- 3. Under the "Web" tab go to the "Servers" section and set Use Visual Studio Development Server
- 4. Open a few instances of chrome to the same URL and try it out.
-
-To build your own conference solution is really easy. Consult the [XSockets.NET developer forum][1] for help and guidance.
-
-**NOTE: Remember to use Chrome!** 
-
-*To learn more about the WebRTC API, read the API-Guide below*
-
-----------
-
-
-  [1]: https://groups.google.com/forum/?hl=en#!forum/xsocketsgroup
-  
 ##JavaScript API - Documentation
 
 Here follows a brief description of the JavaScript API. 
