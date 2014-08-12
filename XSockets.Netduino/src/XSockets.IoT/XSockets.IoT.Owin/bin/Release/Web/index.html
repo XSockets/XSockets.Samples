@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-2.1.1.js"></script>
+    <script src="Scripts/XSockets.latest.beta.js"></script>
+    <script src="Scripts/knockout-3.1.0.js"></script>
+    <script>
+        //XSockets connection
+        var conn;
+        //Knockout observable for messages
+        var vm = {
+            messages: ko.observableArray([])
+        };
+
+        //Doc ready
+        $(function () {
+            ko.applyBindings(vm);
+            //Create a connection to XSockets
+            conn = new XSockets.WebSocket('ws://localhost:4502', ['iot']);
+
+            conn.onconnected = function() {
+                console.log('socket open');
+            }
+
+            conn.controller('iot').onopen = function() {
+                console.log('IoT Controller open');                
+
+                //When the Netduino send a message with topic "chatmessage"
+                //add the message to the observable array
+                conn.controller('iot').chatmessage = function(data) {
+                    vm.messages.unshift(data);
+                }
+            };
+
+            $('button').on('click', function(e) {
+                e.preventDefault();
+                conn.controller('iot').invoke('light', { State: $(this).hasClass('light') });
+            });
+        });
+
+    </script>
+</head>
+    <body>
+        <!-- Hit the button to toggle the onboard light on the netduino //-->
+        <h2>Hit the buttons below to toggle the light on the Netduino</h2>
+        <button class="light">On</button><button>Off</button>
+        
+        <!-- Output the viewmodel data //-->
+        <h2>Press the Netduino onboard button to see messages arrive here</h2>
+        <div data-bind="foreach:messages">
+            <p data-bind="text:Text"></p>
+        </div>
+    </body>
+</html>

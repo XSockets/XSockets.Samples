@@ -1,0 +1,6 @@
+C:\Users\Uffe\Desktop\XSockets.IoT\XSockets.IoT.Client\bin\Release\XSockets.IoT.Client.exe
+C:\Users\Uffe\Desktop\XSockets.IoT\XSockets.IoT.Client\bin\Release\XSockets.IoT.Client.pdb
+C:\Users\Uffe\Desktop\XSockets.IoT\XSockets.IoT.Client\bin\Release\Newtonsoft.Json.dll
+C:\Users\Uffe\Desktop\XSockets.IoT\XSockets.IoT.Client\bin\Release\XSockets.Client40.dll
+C:\Users\Uffe\Desktop\XSockets.IoT\XSockets.IoT.Client\obj\Release\XSockets.IoT.Client.exe
+C:\Users\Uffe\Desktop\XSockets.IoT\XSockets.IoT.Client\obj\Release\XSockets.IoT.Client.pdb
