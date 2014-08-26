@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XSockets.IoT.Server", "XSoc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XSockets.IoT.Arduino", "XSockets.IoT.Arduino", "{B6677668-013D-4520-8314-0EC59922B1B0}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\..\..\Dropbox\Conferences\2014\Malaga\Malaga.Web\XSockets\Clients\Arduino\client.ino = ..\..\..\..\..\..\Dropbox\Conferences\2014\Malaga\Malaga.Web\XSockets\Clients\Arduino\client.ino
+		XSockets.IoT.Arduino\client.ino = XSockets.IoT.Arduino\client.ino
 	EndProjectSection
 EndProject
 Global
