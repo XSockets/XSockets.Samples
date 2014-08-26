@@ -1,0 +1,13 @@
+C:\Users\Uffe\Desktop\XSockets.IoT\XSockets.IoT.Client\bin\Debug\XSockets.IoT.Client.exe
+C:\Users\Uffe\Desktop\XSockets.IoT\XSockets.IoT.Client\bin\Debug\XSockets.IoT.Client.pdb
+C:\Users\Uffe\Desktop\XSockets.IoT\XSockets.IoT.Client\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Uffe\Desktop\XSockets.IoT\XSockets.IoT.Client\bin\Debug\XSockets.Client40.dll
+C:\Users\Uffe\Desktop\XSockets.IoT\XSockets.IoT.Client\obj\Debug\XSockets.IoT.Client.exe
+C:\Users\Uffe\Desktop\XSockets.IoT\XSockets.IoT.Client\obj\Debug\XSockets.IoT.Client.pdb
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Client\bin\Debug\XSockets.IoT.Client.exe
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Client\bin\Debug\XSockets.IoT.Client.pdb
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Client\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Client\bin\Debug\XSockets.Client40.dll
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Client\obj\Debug\XSockets.IoT.Client.exe
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Client\obj\Debug\XSockets.IoT.Client.pdb
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Client\obj\Debug\XSockets.IoT.Client.csprojResolveAssemblyReference.cache
