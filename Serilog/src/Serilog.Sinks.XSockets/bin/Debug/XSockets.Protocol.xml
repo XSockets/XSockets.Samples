@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XSockets.Protocol</name>
+    </assembly>
+    <members>
+        <member name="T:XSockets.Protocol.Rfc6455Protocol">
+            <summary>
+            RFC6455 implementation http://tools.ietf.org/html/rfc6455
+            </summary>
+        </member>
+        <member name="M:XSockets.Protocol.XSocketProtocol.DoHandshake">
+            <summary>
+            Override this and implement all things for your protocol.
+            Validate if needed and also parse out Controller, Fields etc
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XSockets.Protocol.XSocketProtocol.Opened">
+            <summary>
+            Will be called before receive starts.
+            </summary>
+        </member>
+    </members>
+</doc>

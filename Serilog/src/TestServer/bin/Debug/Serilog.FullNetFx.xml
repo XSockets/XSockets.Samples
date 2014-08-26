@@ -105,6 +105,17 @@
             <returns>A token that must be disposed, in order, to pop properties back off the stack.</returns>
             <exception cref="T:System.ArgumentNullException"></exception>
         </member>
+        <member name="M:Serilog.Context.LogContext.Suspend">
+            <summary>
+            Remove all data from the context so that
+            cross-<see cref="T:System.AppDomain"/> calls can be made without requiring
+            Serilog assemblies to be present in the remote domain.
+            </summary>
+            <returns>A token that will restore the suspended log context data, if any.</returns>
+            <remarks>The <see cref="T:Serilog.Context.LogContext"/> should not be manipulated further
+            until the return value from this method has been disposed.</remarks>
+            <returns></returns>
+        </member>
         <member name="T:Serilog.LoggerConfigurationFullNetFxExtensions">
             <summary>
             Extends <see cref="T:Serilog.LoggerConfiguration"/> to add Full .NET Framework 

@@ -16,5 +16,5 @@ The client listens to the LogEvent by using
     });
 
 Download the sample project and run the "TestServer" project
-Note that all logs to the Serilog.Sinks.XSockets is written in green so that you can sort them out from the regular console log.
+Note that all logs to the Serilog.Sinks.XSockets is written in CYAN so that you can sort them out from the regular console log.
 You can ofcourse change the sinks used in the "MyLogger" class in the "TestServer" project.

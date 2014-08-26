@@ -1,6 +1,4 @@
 ﻿using System;
-using Serilog.Configuration;
-using Serilog.Events;
 
 // Copyright 2014 Serilog Contributors
 // 
@@ -15,6 +13,8 @@ using Serilog.Events;
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+using Serilog.Configuration;
+using Serilog.Events;
 using Serilog.Sinks.XSockets.Sinks.XSockets;
 
 namespace Serilog.Sinks.XSockets

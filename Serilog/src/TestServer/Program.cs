@@ -36,8 +36,9 @@ namespace TestServer
                 
                 client.Controller("log").On<LogEventWrapper>("logEvent", logEvent =>
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Message: {0}",logEvent.RenderedMessage);                    
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.WriteLine("Message: {0}",logEvent.RenderedMessage);
+                    Console.ResetColor();
                 });
 
                 //Change the LogEventLevel the client listens to every 8 seconds
@@ -49,7 +50,8 @@ namespace TestServer
                         client.Controller("log").SetEnum("LogEventLevel", newLevel);
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("New LogEventLevel set to {0}", newLevel);
-                        Thread.Sleep(8000);
+                        Console.ResetColor();
+                        Thread.Sleep(8000);                        
                     }
                 });
                 

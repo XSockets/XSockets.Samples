@@ -1,22 +1,19 @@
 ﻿using Serilog;
 using Serilog.Sinks.XSockets;
-using XSockets.Plugin.Framework.Logger;
+using XSockets.Logger;
 
 namespace TestServer
 {
     /// <summary>
     /// Write to XSockets and the Console
     /// </summary>
-    public class MyLogger : IDefaultLogger
+    public class MyLogger : XLogger
     {
-        public ILogger Logger
+        public MyLogger()
         {
-            get
-            {
-                return new LoggerConfiguration()
-                    .WriteTo.ColoredConsole()
-                    .WriteTo.XSockets().MinimumLevel.Verbose().CreateLogger();
-            }
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.ColoredConsole()
+                .WriteTo.XSockets().MinimumLevel.Verbose().CreateLogger();
         }
     }
 }

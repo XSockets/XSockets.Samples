@@ -1,4 +1,4 @@
-﻿using Serilog.Events;
+﻿using XSockets.Core.Common.Utility.Logging;
 using XSockets.Core.XSocket;
 using XSockets.Plugin.Framework.Attributes;
 
