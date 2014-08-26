@@ -3,6 +3,7 @@
 A simple project that shows how easy it is to connect 
 
 - Netduino
+- Arduino
 - Browsers
 - Console Application
 
@@ -40,3 +41,5 @@ When you press the button in the Netduino chatmessages will appear in the browse
 
 #### XSockets.IoT.Controllers (Should not be started)
 XSockets Controller and very simple logic
+
+NOTE: The Arduino code is located in the XSockets.IoT.Arduino folder.
