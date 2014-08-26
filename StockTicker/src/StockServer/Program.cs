@@ -2,28 +2,26 @@
 using Microsoft.Owin.Hosting;
 using Owin;
 using Serilog;
-using Serilog.Events;
+using XSockets.Core.Common.Utility.Logging;
+using XSockets.Logger;
 using XSockets.Owin.Host;
+using XSockets.Plugin.Framework;
 using XSockets.Plugin.Framework.Attributes;
-using XSockets.Plugin.Framework.Helpers;
-using XSockets.Plugin.Framework.Logger;
+using LogEventLevel = Serilog.Events.LogEventLevel;
 
 namespace StockServer
 {
     /// <summary>
     /// A custom logger to log verbose... Information is default level
-    /// </summary>
-    [Export(typeof(IDefaultLogger))]
-    public class MyLogger : IDefaultLogger
+    /// </summary>    
+    public class MyLogger : XLogger
     {
-        public ILogger Logger
+        public MyLogger()
         {
-            get
-            {
-                return new LoggerConfiguration()
+
+            Serilog.Log.Logger = new LoggerConfiguration()
                     .WriteTo.ColoredConsole().MinimumLevel.Verbose()                    
                     .CreateLogger();
-            }
         }
     }
 
@@ -47,7 +45,7 @@ namespace StockServer
         {
             using (WebApp.Start<Startup>("http://localhost:12345"))
             {
-                LogHelper.Log(LogEventLevel.Information, "All files under Sample/Web should have the property 'Copy to output directory' set to 'Copy always'");
+                Composable.GetExport<IXLogger>().Information("All files under Sample/Web should have the property 'Copy to output directory' set to 'Copy always'");
                 Console.WriteLine("Navigate to: http://localhost:12345/Sample/Web/Stockticker.html");
                 Console.ReadLine();
             }
