@@ -842,16 +842,29 @@
         </member>
         <member name="T:Serilog.Formatting.Json.JsonFormatter">
             <summary>
-            Formats log events in a simple JSON structure.
+            Formats log events in a simple JSON structure. Instances of this class
+            are safe for concurrent access by multiple threads.
             </summary>
         </member>
         <member name="M:Serilog.Formatting.Json.JsonFormatter.#ctor(System.Boolean)">
+            <summary>
+            Construct a <see cref="T:Serilog.Formatting.Json.JsonFormatter"/>. Obsolete, please use named arguments
+            when calling this constructor.
+            </summary>
+        </member>
+        <member name="M:Serilog.Formatting.Json.JsonFormatter.#ctor(System.Boolean,System.String,System.Boolean,System.IFormatProvider)">
             <summary>
             Construct a <see cref="T:Serilog.Formatting.Json.JsonFormatter"/>.
             </summary>
             <param name="omitEnclosingObject">If true, the properties of the event will be written to
             the output without enclosing braces. Otherwise, if false, each event will be written as a well-formed
             JSON object.</param>
+            <param name="closingDelimiter">A string that will be written after each log event is formatted.
+            If null, <see cref="P:System.Environment.NewLine"/> will be used. Ignored if <paramref name="omitEnclosingObject"/>
+            is true.</param>
+            <param name="renderMessage">If true, the message will be rendered and written to the output as a
+            property named RenderedMessage.</param>
+            <param name="formatProvider">Supplies culture-specific formatting information, or null.</param>
         </member>
         <member name="M:Serilog.Formatting.Json.JsonFormatter.Format(Serilog.Events.LogEvent,System.IO.TextWriter)">
             <summary>
