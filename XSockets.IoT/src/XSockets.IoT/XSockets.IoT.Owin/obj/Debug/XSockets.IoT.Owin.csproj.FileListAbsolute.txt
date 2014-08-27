@@ -24,7 +24,6 @@ C:\Users\Uffe\Desktop\XSockets.IoT\XSockets.IoT.Owin\obj\Debug\XSockets.IoT.Owin
 C:\Users\Uffe\Desktop\XSockets.IoT\XSockets.IoT.Owin\obj\Debug\XSockets.IoT.Owin.pdb
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Owin\bin\Debug\Web\Scripts\knockout-3.1.0.js
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Owin\bin\Debug\Web\Scripts\jquery-2.1.1.js
-C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Owin\bin\Debug\Web\Scripts\XSockets.latest.beta.js
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Owin\bin\Debug\Web\index.html
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Owin\bin\Debug\XSockets.IoT.Owin.exe.config
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Owin\bin\Debug\XSockets.IoT.Owin.exe

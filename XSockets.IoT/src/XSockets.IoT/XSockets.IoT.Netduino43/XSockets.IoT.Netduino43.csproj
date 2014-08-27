@@ -50,7 +50,7 @@
     <Reference Include="SecretLabs.NETMF.Hardware" />
     <Reference Include="SecretLabs.NETMF.Hardware.Netduino" />
     <Reference Include="System" />
-    <Reference Include="XSockets.ClientMF43, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="XSockets.ClientMF43, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\XSockets.Client.4.0.0-rc2\lib\netmf43\XSockets.ClientMF43.dll</HintPath>
     </Reference>

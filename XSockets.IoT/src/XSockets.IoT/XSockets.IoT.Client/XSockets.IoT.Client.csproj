@@ -43,7 +43,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="XSockets.Client40, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="XSockets.Client40, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\XSockets.Client.4.0.0-rc2\lib\net40\XSockets.Client40.dll</HintPath>
     </Reference>

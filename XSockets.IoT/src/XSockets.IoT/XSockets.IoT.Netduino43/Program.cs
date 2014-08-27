@@ -19,7 +19,7 @@ namespace XSockets.IoT.Netduino43
         public static void Main()
         {
             //Change this ip to the IP of your machine (where XSockets is running)
-            _conn = new XSocketClient("192.168.0.109", 4502);
+            _conn = new XSocketClient("192.168.1.2", 4502);
 
             _conn.OnOpen += ConnOnOpen;
             _conn.OnClose += ConnOnClose;

@@ -36,13 +36,11 @@ C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XS
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\bin\Debug\XSockets.Core.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\bin\Debug\XSockets.CustomProtocol.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\bin\Debug\XSockets.Enterprise.dll
-C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\bin\Debug\XSockets.IoT.Controllers.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\bin\Debug\XSockets.Logger.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\bin\Debug\XSockets.Plugin.Framework.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\bin\Debug\XSockets.Protocol.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\bin\Debug\XSockets.Serialization.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\bin\Debug\XSockets.Server.dll
-C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\bin\Debug\XSockets.IoT.Controllers.pdb
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\bin\Debug\XSockets.Controllers.xml
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\bin\Debug\XSockets.Core.xml
@@ -55,3 +53,5 @@ C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XS
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\bin\Debug\XSockets.Serialization.xml
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\bin\Debug\XSockets.Server.xml
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\obj\Debug\XSockets.IoT.Server.csprojResolveAssemblyReference.cache
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\bin\Debug\XSockets.IoT.Controllers.dll
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Server\bin\Debug\XSockets.IoT.Controllers.pdb

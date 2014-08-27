@@ -53,6 +53,7 @@
     <Reference Include="XSockets.Controllers, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\XSockets.Server.4.0.0-rc2\lib\net40\XSockets.Controllers.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="XSockets.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=da46457513262a6c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -85,6 +86,7 @@
     <Reference Include="XSockets.Protocol, Version=4.0.0.0, Culture=neutral, PublicKeyToken=da46457513262a6c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\XSockets.Core.4.0.0-rc2\lib\net40\XSockets.Protocol.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="XSockets.Serialization, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -103,13 +105,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="XSocketsNET\ServerExample\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\XSockets.IoT.Controllers\XSockets.IoT.Controllers.csproj">
       <Project>{08d772fc-9649-44d6-9e77-a44c239aea40}</Project>
       <Name>XSockets.IoT.Controllers</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="XSocketsNET\ServerExample\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
