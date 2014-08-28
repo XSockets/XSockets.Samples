@@ -46,3 +46,5 @@ C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XS
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Owin\obj\Debug\XSockets.IoT.Owin.exe
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Owin\obj\Debug\XSockets.IoT.Owin.pdb
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Owin\obj\Debug\XSockets.IoT.Owin.csprojResolveAssemblyReference.cache
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Owin\bin\Debug\Web\Scripts\XSockets.latest.js
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\XSockets.IoT\src\XSockets.IoT\XSockets.IoT.Owin\bin\Debug\Web\Scripts\XSockets.latest.min.js
