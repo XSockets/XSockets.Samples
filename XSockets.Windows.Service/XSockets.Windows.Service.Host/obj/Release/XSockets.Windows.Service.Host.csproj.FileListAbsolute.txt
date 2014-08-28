@@ -1,0 +1,15 @@
+C:\Users\deleteme\Dropbox\VS2012\XSocketDemos\XSockets.Windows.Service\XSockets.Windows.Service.Host\bin\Release\XSockets.Windows.Service.Host.dll
+C:\Users\deleteme\Dropbox\VS2012\XSocketDemos\XSockets.Windows.Service\XSockets.Windows.Service.Host\bin\Release\XSockets.Windows.Service.Host.pdb
+C:\Users\deleteme\Dropbox\VS2012\XSocketDemos\XSockets.Windows.Service\XSockets.Windows.Service.Host\bin\Release\XSockets.Core.Common.dll
+C:\Users\deleteme\Dropbox\VS2012\XSocketDemos\XSockets.Windows.Service\XSockets.Windows.Service.Host\bin\Release\XSockets.Core.dll
+C:\Users\deleteme\Dropbox\VS2012\XSocketDemos\XSockets.Windows.Service\XSockets.Windows.Service.Host\bin\Release\XSockets.Plugin.Framework.dll
+C:\Users\deleteme\Dropbox\VS2012\XSocketDemos\XSockets.Windows.Service\XSockets.Windows.Service.Host\obj\Release\XSockets.Windows.Service.Host.dll
+C:\Users\deleteme\Dropbox\VS2012\XSocketDemos\XSockets.Windows.Service\XSockets.Windows.Service.Host\obj\Release\XSockets.Windows.Service.Host.pdb
+C:\Users\Uffe\Dropbox\VS2012\XSocketDemos\XSockets.Windows.Service\XSockets.Windows.Service.Host\bin\Release\XSockets.Windows.Service.Host.dll
+C:\Users\Uffe\Dropbox\VS2012\XSocketDemos\XSockets.Windows.Service\XSockets.Windows.Service.Host\bin\Release\XSockets.Windows.Service.Host.pdb
+C:\Users\Uffe\Dropbox\VS2012\XSocketDemos\XSockets.Windows.Service\XSockets.Windows.Service.Host\bin\Release\XSockets.Core.Common.dll
+C:\Users\Uffe\Dropbox\VS2012\XSocketDemos\XSockets.Windows.Service\XSockets.Windows.Service.Host\bin\Release\XSockets.Core.dll
+C:\Users\Uffe\Dropbox\VS2012\XSocketDemos\XSockets.Windows.Service\XSockets.Windows.Service.Host\bin\Release\XSockets.Plugin.Framework.dll
+C:\Users\Uffe\Dropbox\VS2012\XSocketDemos\XSockets.Windows.Service\XSockets.Windows.Service.Host\obj\Release\XSockets.Windows.Service.Host.dll
+C:\Users\Uffe\Dropbox\VS2012\XSocketDemos\XSockets.Windows.Service\XSockets.Windows.Service.Host\obj\Release\XSockets.Windows.Service.Host.pdb
+C:\Users\Uffe\Dropbox\VS2012\XSocketDemos\XSockets.Windows.Service\XSockets.Windows.Service.Host\bin\Release\XSockets.Windows.Service.Host.dll.config

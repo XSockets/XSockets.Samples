@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XSockets.Windows.Service", "XSockets.Windows.Service\XSockets.Windows.Service.csproj", "{A1E7C8EC-FB05-4A63-A413-F17B41386851}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{1E42791D-E5F8-4C83-BD00-FD541EE406F8}"
+	ProjectSection(SolutionItems) = preProject
+		Dependencies\Serilog.dll = Dependencies\Serilog.dll
+		Dependencies\Serilog.FullNetFx.dll = Dependencies\Serilog.FullNetFx.dll
+		Dependencies\XSockets.Controllers.dll = Dependencies\XSockets.Controllers.dll
+		Dependencies\XSockets.Core.Common.dll = Dependencies\XSockets.Core.Common.dll
+		Dependencies\XSockets.Core.Communication.dll = Dependencies\XSockets.Core.Communication.dll
+		Dependencies\XSockets.Core.dll = Dependencies\XSockets.Core.dll
+		Dependencies\XSockets.CustomProtocol.dll = Dependencies\XSockets.CustomProtocol.dll
+		Dependencies\XSockets.Enterprise.dll = Dependencies\XSockets.Enterprise.dll
+		Dependencies\XSockets.Logger.dll = Dependencies\XSockets.Logger.dll
+		Dependencies\XSockets.Plugin.Framework.dll = Dependencies\XSockets.Plugin.Framework.dll
+		Dependencies\XSockets.Protocol.dll = Dependencies\XSockets.Protocol.dll
+		Dependencies\XSockets.Serialization.dll = Dependencies\XSockets.Serialization.dll
+		Dependencies\XSockets.Server.dll = Dependencies\XSockets.Server.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XSockets.Windows.Service.Host", "XSockets.Windows.Service.Host\XSockets.Windows.Service.Host.csproj", "{C6441C54-73FB-4386-B22D-8F2322C3C72C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1E7C8EC-FB05-4A63-A413-F17B41386851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E7C8EC-FB05-4A63-A413-F17B41386851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E7C8EC-FB05-4A63-A413-F17B41386851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E7C8EC-FB05-4A63-A413-F17B41386851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6441C54-73FB-4386-B22D-8F2322C3C72C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6441C54-73FB-4386-B22D-8F2322C3C72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6441C54-73FB-4386-B22D-8F2322C3C72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6441C54-73FB-4386-B22D-8F2322C3C72C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

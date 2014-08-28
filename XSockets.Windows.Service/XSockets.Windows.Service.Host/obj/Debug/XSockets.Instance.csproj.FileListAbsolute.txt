@@ -1,0 +1,9 @@
+C:\Users\Uffe\Desktop\XSockets.Windows.Service\XSockets.Instance\bin\Debug\XSockets.Instance.dll
+C:\Users\Uffe\Desktop\XSockets.Windows.Service\XSockets.Instance\bin\Debug\XSockets.Instance.pdb
+C:\Users\Uffe\Desktop\XSockets.Windows.Service\XSockets.Instance\bin\Debug\XSockets.Core.Common.dll
+C:\Users\Uffe\Desktop\XSockets.Windows.Service\XSockets.Instance\bin\Debug\XSockets.Core.dll
+C:\Users\Uffe\Desktop\XSockets.Windows.Service\XSockets.Instance\bin\Debug\XSockets.Plugin.Framework.Core.dll
+C:\Users\Uffe\Desktop\XSockets.Windows.Service\XSockets.Instance\bin\Debug\XSockets.Plugin.Framework.dll
+C:\Users\Uffe\Desktop\XSockets.Windows.Service\XSockets.Instance\obj\Debug\XSockets.Instance.dll
+C:\Users\Uffe\Desktop\XSockets.Windows.Service\XSockets.Instance\obj\Debug\XSockets.Instance.pdb
+C:\Users\Uffe\Desktop\XSockets.Windows.Service\XSockets.Instance\obj\Debug\XSockets.Instance.csprojResolveAssemblyReference.cache
