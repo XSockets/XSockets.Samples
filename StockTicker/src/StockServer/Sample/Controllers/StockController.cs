@@ -9,7 +9,7 @@ using XSockets.Plugin.Framework.Attributes;
 
 namespace StockServer.Sample.Controllers
 {
-    [XSocketMetadata(PluginAlias="Stock")]
+    [XSocketMetadata(PluginAlias="stock")]
     public class StockController : XSocketController
     {
         //We have state :) Each user can listen to stocks of choice

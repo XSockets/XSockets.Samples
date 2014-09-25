@@ -2,7 +2,6 @@ C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Sample\Web\js\jquery-2.1.1.js
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Sample\Web\js\knockout-2.2.1.js
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Sample\Web\js\knockout-3.1.0.js
-C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Sample\Web\js\XSockets.latest.beta.js
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Sample\Web\StockTicker.css
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Sample\Web\StockTicker.html
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Sample\Web\StockTicker.js
@@ -14,15 +13,12 @@ C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Microsoft.Owin.Host.HttpListener.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Microsoft.Owin.Hosting.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Microsoft.Owin.StaticFiles.dll
-C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Newtonsoft.Json.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Owin.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Serilog.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Serilog.FullNetFx.dll
-C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\XSockets.Client40.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\XSockets.Controllers.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\XSockets.Core.Common.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\XSockets.Core.Communication.dll
-C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\XSockets.Core.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\XSockets.Enterprise.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\XSockets.Owin.Host.dll
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\XSockets.Plugin.Framework.dll
@@ -51,3 +47,9 @@ C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\XSockets.Protocol.xml
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\XSockets.Serialization.xml
 C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\XSockets.Server.xml
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\XSockets.Core.dll
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Serilog.pdb
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Serilog.xml
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Serilog.FullNetFx.pdb
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Serilog.FullNetFx.xml
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\StockTicker\src\StockServer\bin\Release\Sample\Web\js\XSockets.latest.js

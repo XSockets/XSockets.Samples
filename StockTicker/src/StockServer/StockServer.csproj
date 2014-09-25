@@ -62,11 +62,11 @@
     </Reference>
     <Reference Include="Serilog, Version=1.3.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\XSockets.Server.4.0.0-rc1\lib\net40\Serilog.dll</HintPath>
+      <HintPath>..\packages\Serilog.1.3.43\lib\net45\Serilog.dll</HintPath>
     </Reference>
     <Reference Include="Serilog.FullNetFx, Version=1.3.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\XSockets.Server.4.0.0-rc1\lib\net40\Serilog.FullNetFx.dll</HintPath>
+      <HintPath>..\packages\Serilog.1.3.43\lib\net45\Serilog.FullNetFx.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -75,64 +75,62 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="XSockets.Client40, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="XSockets.Controllers, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\XSockets.Client.4.0.0-rc1\lib\net40\XSockets.Client40.dll</HintPath>
-    </Reference>
-    <Reference Include="XSockets.Controllers">
-      <HintPath>..\packages\XSockets.Server.4.0.0-rc1\lib\net40\XSockets.Controllers.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\XSockets.Server.4.0.0\lib\net40\XSockets.Controllers.dll</HintPath>
     </Reference>
     <Reference Include="XSockets.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=da46457513262a6c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\XSockets.Core.4.0.0-rc1\lib\net40\XSockets.Core.dll</HintPath>
+      <HintPath>..\packages\XSockets.Core.4.0.0\lib\net40\XSockets.Core.dll</HintPath>
     </Reference>
     <Reference Include="XSockets.Core.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=da46457513262a6c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\XSockets.Core.4.0.0-rc1\lib\net40\XSockets.Core.Common.dll</HintPath>
+      <HintPath>..\packages\XSockets.Core.4.0.0\lib\net40\XSockets.Core.Common.dll</HintPath>
     </Reference>
-    <Reference Include="XSockets.Core.Communication, Version=4.0.0.0, Culture=neutral, PublicKeyToken=da46457513262a6c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\XSockets.Server.4.0.0-rc1\lib\net40\XSockets.Core.Communication.dll</HintPath>
+    <Reference Include="XSockets.Core.Communication">
+      <HintPath>..\packages\XSockets.Server.4.0.0\lib\net40\XSockets.Core.Communication.dll</HintPath>
     </Reference>
     <Reference Include="XSockets.CustomProtocol">
-      <HintPath>..\packages\XSockets.Core.4.0.0-rc1\lib\net40\XSockets.CustomProtocol.dll</HintPath>
+      <HintPath>..\packages\XSockets.Core.4.0.0\lib\net40\XSockets.CustomProtocol.dll</HintPath>
     </Reference>
     <Reference Include="XSockets.Enterprise, Version=4.0.0.0, Culture=neutral, PublicKeyToken=da46457513262a6c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\XSockets.Server.4.0.0-rc1\lib\net40\XSockets.Enterprise.dll</HintPath>
+      <HintPath>..\packages\XSockets.Server.4.0.0\lib\net40\XSockets.Enterprise.dll</HintPath>
     </Reference>
-    <Reference Include="XSockets.Logger">
-      <HintPath>..\packages\XSockets.Server.4.0.0-rc1\lib\net40\XSockets.Logger.dll</HintPath>
+    <Reference Include="XSockets.Logger, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\XSockets.Server.4.0.0\lib\net40\XSockets.Logger.dll</HintPath>
     </Reference>
     <Reference Include="XSockets.Owin.Host, Version=4.0.0.0, Culture=neutral, PublicKeyToken=da46457513262a6c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\XSockets.Owin.Host.4.0.0-rc1\lib\net45\XSockets.Owin.Host.dll</HintPath>
+      <HintPath>..\packages\XSockets.Owin.Host.4.0.0\lib\net45\XSockets.Owin.Host.dll</HintPath>
     </Reference>
     <Reference Include="XSockets.Plugin.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=da46457513262a6c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\XSockets.Plugin.Framework.4.0.0-rc1\lib\net40\XSockets.Plugin.Framework.dll</HintPath>
+      <HintPath>..\packages\XSockets.Plugin.Framework.4.0.0\lib\net40\XSockets.Plugin.Framework.dll</HintPath>
     </Reference>
     <Reference Include="XSockets.Protocol, Version=4.0.0.0, Culture=neutral, PublicKeyToken=da46457513262a6c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\XSockets.Core.4.0.0-rc1\lib\net40\XSockets.Protocol.dll</HintPath>
+      <HintPath>..\packages\XSockets.Core.4.0.0\lib\net40\XSockets.Protocol.dll</HintPath>
     </Reference>
     <Reference Include="XSockets.Serialization, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\XSockets.Core.4.0.0-rc1\lib\net40\XSockets.Serialization.dll</HintPath>
+      <HintPath>..\packages\XSockets.Core.4.0.0\lib\net40\XSockets.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="XSockets.Server, Version=4.0.0.0, Culture=neutral, PublicKeyToken=da46457513262a6c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\XSockets.Server.4.0.0-rc1\lib\net40\XSockets.Server.dll</HintPath>
+      <HintPath>..\packages\XSockets.Server.4.0.0\lib\net40\XSockets.Server.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyLogger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sample\Controllers\StockController.cs" />
     <Compile Include="Sample\Controllers\StockTickerController.cs" />
     <Compile Include="Sample\Model\Stock.cs" />
     <Compile Include="Sample\Model\StockTicker.cs" />
+    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -150,7 +148,7 @@
     <Content Include="Sample\Web\js\knockout-3.1.0.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sample\Web\js\XSockets.latest.beta.js">
+    <Content Include="Sample\Web\js\XSockets.latest.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Sample\Web\StockTicker.css">
@@ -162,7 +160,6 @@
     <Content Include="Sample\Web\StockTicker.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="XSocketsNET\ServerExample\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
