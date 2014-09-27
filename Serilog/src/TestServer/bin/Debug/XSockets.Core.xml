@@ -427,9 +427,67 @@
             RFC6455 data frame
             </summary>
         </member>
+        <member name="M:XSockets.Core.Utility.Protocol.FrameBuilders.Rfc6455DataFrame.ToBytes">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:XSockets.Core.Utility.Protocol.FrameBuilders.Rfc6455DataFrame.IsFinal">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.Utility.Protocol.FrameBuilders.Rfc6455DataFrame.FrameType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.Utility.Protocol.FrameBuilders.Rfc6455DataFrame.IsMasked">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.Utility.Protocol.FrameBuilders.Rfc6455DataFrame.PayloadLength">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.Utility.Protocol.FrameBuilders.Rfc6455DataFrame.MaskKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.Utility.Protocol.FrameBuilders.Rfc6455DataFrame.Payload">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:XSockets.Core.Utility.Protocol.FrameBuilders.XDataFrame">
             <summary>
             Internal data frames
+            </summary>
+        </member>
+        <member name="M:XSockets.Core.Utility.Protocol.FrameBuilders.XDataFrame.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="M:XSockets.Core.Utility.Protocol.FrameBuilders.XDataFrame.#ctor(System.String)">
+            <summary>
+            Ctor with payload
+            </summary>
+            <param name="payload"></param>
+        </member>
+        <member name="M:XSockets.Core.Utility.Protocol.FrameBuilders.XDataFrame.ToBytes">
+            <summary>
+            Wrapp payload in start and end bytes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:XSockets.Core.Utility.Protocol.FrameBuilders.XDataFrame.Payload">
+            <summary>
+            The data to send
             </summary>
         </member>
         <member name="T:XSockets.Core.Utility.Protocol.Readers.ReadState">
@@ -447,12 +505,12 @@
             
             </summary>
         </member>
-        <member name="P:XSockets.Core.Utility.Protocol.Readers.ReadState.ReadStatePosition">
+        <member name="P:XSockets.Core.Utility.Protocol.Readers.ReadState.Data">
             <summary>
             
             </summary>
         </member>
-        <member name="P:XSockets.Core.Utility.Protocol.Readers.ReadState.Data">
+        <member name="P:XSockets.Core.Utility.Protocol.Readers.ReadState.MaskedBytes">
             <summary>
             
             </summary>
@@ -462,34 +520,34 @@
             
             </summary>
         </member>
-        <member name="P:XSockets.Core.Utility.Protocol.Readers.ReadState.Size">
+        <member name="P:XSockets.Core.Utility.Protocol.Readers.ReadState.Length">
             <summary>
             
             </summary>
         </member>
-        <member name="P:XSockets.Core.Utility.Protocol.Readers.ReadState.Processed">
+        <member name="P:XSockets.Core.Utility.Protocol.Readers.ReadState.BufferedIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.Utility.Protocol.Readers.ReadState.IsFinal">
             <summary>
             
             </summary>
         </member>
         <member name="T:XSockets.Core.Utility.Protocol.Readers.XFrameHandler">
             <summary>
-            
-            </summary>
-        </member>
-        <member name="F:XSockets.Core.Utility.Protocol.Readers.XFrameHandler.Frame">
-            <summary>
-            
+            For processing frames
             </summary>
         </member>
         <member name="F:XSockets.Core.Utility.Protocol.Readers.XFrameHandler.ReceiveData">
             <summary>
-            
+            Delegate for reading frames
             </summary>
         </member>
-        <member name="M:XSockets.Core.Utility.Protocol.Readers.XFrameHandler.Receive(System.Collections.Generic.IEnumerable{System.Byte})">
+        <member name="M:XSockets.Core.Utility.Protocol.Readers.XFrameHandler.Receive(System.ArraySegment{System.Byte})">
             <summary>
-            
+            Will invoke the delegate for frame reading
             </summary>
             <param name="data"></param>
         </member>
@@ -720,6 +778,16 @@
             Protocolinformation - The value of the SecWebSocketKey HTTP header included in the opening handshake.
             </summary>
         </member>
+        <member name="P:XSockets.Core.XSocket.ConnectionContext.SecWebSocketProtocols">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.XSocket.ConnectionContext.SecWebSocketVersion">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="P:XSockets.Core.XSocket.ConnectionContext.Reconnecting">
             <summary>
             Flag for knowing if this client is reconnecting
@@ -846,6 +914,15 @@
             <param name="expression"></param>
             <param name="name">Name of method to invoke on the clients</param>
         </member>
+        <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.InvokeTo``1(``0,System.Func{``0,System.Boolean},System.String)">
+            <summary>
+            Calls a method (name) on the clients matching the expression
+            </summary>
+            <typeparam name="T">The IXSocketController T to target</typeparam>
+            <param name="controller">IXSocketController that invokes the extension</param>
+            <param name="expression"></param>
+            <param name="name">Name of method to invoke on the clients</param>
+        </member>
         <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.InvokeTo``1(XSockets.Core.Common.Socket.IXSocketController,System.Func{``0,System.Boolean},System.Object,System.String)">
             <summary>
             Calls a method (name) on the clients matching the expression
@@ -882,6 +959,14 @@
             <typeparam name="T">The IXSocketController T to target</typeparam>
             <param name="controller">IXSocketController that invokes the extension</param>
             <param name="message"></param>
+        </member>
+        <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.InvokeToAll``1(XSockets.Core.Common.Socket.IXSocketController,System.String)">
+            <summary>
+            Calls a method (name) on all clients connected
+            </summary>
+            <typeparam name="T">The IXSocketController T to target</typeparam>
+            <param name="controller">IXSocketController that invokes the extension</param>
+            <param name="name"></param>
         </member>
         <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.InvokeToAll``1(``0,System.String)">
             <summary>
@@ -1019,7 +1104,28 @@
             <param name="metadata"></param>
             <param name="name">Name of method to invoke on the clients</param>
         </member>
+        <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.InvokeTo``1(XSockets.Core.Common.Socket.IXSocketController,System.Func{``0,System.Boolean},System.Collections.Generic.IList{System.Byte},System.Object,System.String)">
+            <summary>
+            Will send a binary object with metadata to a subset of clients matching the expression that is connected to the controller
+            </summary>
+            <typeparam name="T">The IXSocketController T to target</typeparam>
+            <param name="controller">IXSocketController that invokes the extension</param>
+            <param name="expression"></param>        
+            <param name="data">The binary data to send</param>
+            <param name="metadata"></param>
+            <param name="name">Name of method to invoke on the clients</param>
+        </member>
         <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.InvokeTo``1(``0,System.Func{``0,System.Boolean},System.Collections.Generic.IList{System.Byte},System.String)">
+            <summary>
+            Will send a binary object to clients connected to the controller matching the expression
+            </summary>
+            <typeparam name="T">The IXSocketController T to target</typeparam>
+            <param name="controller">IXSocketController that invokes the extension</param>
+            <param name="expression"></param>
+            <param name="data">The binary data to send</param>
+            <param name="name">Name of method to invoke on the clients</param>
+        </member>
+        <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.InvokeTo``1(XSockets.Core.Common.Socket.IXSocketController,System.Func{``0,System.Boolean},System.Collections.Generic.IList{System.Byte},System.String)">
             <summary>
             Will send a binary object to clients connected to the controller matching the expression
             </summary>
@@ -1039,7 +1145,26 @@
             <param name="metadata"></param>
             <param name="name">Name of method to invoke on the clients</param>
         </member>
+        <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.InvokeToAll``1(XSockets.Core.Common.Socket.IXSocketController,System.Collections.Generic.IList{System.Byte},System.Object,System.String)">
+            <summary>
+            Will send a binary object with metadata to all clients connected to the controller
+            </summary>
+            <typeparam name="T">The IXSocketController T to target</typeparam>
+            <param name="controller">IXSocketController that invokes the extension</param>        
+            <param name="data">The binary data to send</param>
+            <param name="metadata"></param>
+            <param name="name">Name of method to invoke on the clients</param>
+        </member>
         <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.InvokeToAll``1(``0,System.Collections.Generic.IList{System.Byte},System.String)">
+            <summary>
+            Will send a binary object to all clients connected to the controller
+            </summary>
+            <typeparam name="T">The IXSocketController T to target</typeparam>
+            <param name="controller">IXSocketController that invokes the extension</param>
+            <param name="data">The binary data to send</param>
+            <param name="name">Name of method to invoke on the clients</param>
+        </member>
+        <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.InvokeToAll``1(XSockets.Core.Common.Socket.IXSocketController,System.Collections.Generic.IList{System.Byte},System.String)">
             <summary>
             Will send a binary object to all clients connected to the controller
             </summary>
@@ -1226,15 +1351,6 @@
             <param name="controller"></param>
             <param name="customMessage"></param>
         </member>
-        <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.RouteErrorTo``1(``0,System.Exception,System.String)">
-            <summary>
-            Sends an error internally to a controller. Good for sending errors to a controller that handles all errors or a logger etc.
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="controller">IXSocketController that invokes the extension</param>        
-            <param name="ex"></param>
-            <param name="customMessage"></param>
-        </member>
         <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.StorageSet(XSockets.Core.Common.Socket.IXSocketController,System.String,System.Object)">
             <summary>
             Adds a new value to the key in the storage for the XNode.
@@ -1317,15 +1433,7 @@
             If possible use the extension-method ToTextArgs for the controller instead
             </summary>
             <param name="obj"></param>
-            <param name="topic"></param>
-            <returns></returns>
-        </member>
-        <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.AsMessageForJson(System.String,System.String)">
-            <summary>
-            Builds a ITextArgs object from a JSON string and a event name
-            </summary>
-            <param name="json"></param>
-            <param name="topic"></param>
+            <param name="topic"></param>        
             <returns></returns>
         </member>
         <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.AsMessage(System.Byte[])">
@@ -1356,6 +1464,13 @@
             </summary>
             <param name="targetType"></param>
             <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.IsJson(System.String)">
+            <summary>
+            Can probably be safer than this...
+            </summary>
+            <param name="jsonData"></param>
             <returns></returns>
         </member>
         <member name="F:XSockets.Core.XSocket.Helpers.XSocketHelper.ProcessorCount">
@@ -1443,48 +1558,6 @@
             <param name="controller"></param>
             <param name="expression"></param>
             <param name="message"></param>
-        </member>
-        <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.RouteTo``1(XSockets.Core.Common.Socket.IXSocketController,XSockets.Core.Common.Socket.Event.Interface.IMessage)">
-            <summary>
-            Sends/Routes an message to a controller
-            </summary>
-            <typeparam name="T">The IXSocketController T to target</typeparam>
-            <param name="controller">IXSocketController that invokes the extension</param>
-            <param name="message"></param>
-        </member>
-        <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.RouteTo``1(XSockets.Core.Common.Socket.IXSocketController,System.Object,System.String)">
-            <summary>
-            Sends/Routes an message to a controller
-            </summary>
-            <typeparam name="T">The IXSocketController T to target</typeparam>
-            <param name="controller">IXSocketController that invokes the extension</param>
-            <param name="obj"></param>
-            <param name="topic"></param>
-        </member>
-        <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.RouteTo(XSockets.Core.Common.Socket.IXSocketController,System.String,XSockets.Core.Common.Socket.Event.Interface.IMessage)">
-            <summary>
-            Sends/Routes an message to a controller
-            </summary>
-            <param name="controller">IXSocketController that invokes the extension</param>
-            <param name="controllername"></param>
-            <param name="message"></param>
-        </member>
-        <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.RouteTo``1(``0,XSockets.Core.Common.Socket.Event.Interface.IMessage)">
-            <summary>
-            Sends/Routes an message to a controller
-            </summary>
-            <typeparam name="T">The IXSocketController T to target</typeparam>
-            <param name="controller">IXSocketController that invokes the extension</param>
-            <param name="message"></param>
-        </member>
-        <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.RouteTo``1(``0,System.Byte[],System.String)">
-            <summary>
-            Sends/Routes an message to a controller
-            </summary>
-            <typeparam name="T">The IXSocketController T to target</typeparam>
-            <param name="controller">IXSocketController that invokes the extension</param>
-            <param name="obj"></param>
-            <param name="topic"></param>
         </member>
         <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.PublishTo``1(``0,System.Collections.Generic.IEnumerable{``0},XSockets.Core.Common.Socket.Event.Interface.IMessage)">
             <summary>
@@ -1578,7 +1651,7 @@
             </summary>
             <typeparam name="T">The IXSocketController T to target</typeparam>
             <param name="socket">IXSocketController that invokes the extension</param>
-            <param name="json"></param>
+            <param name="obj"></param>
             <param name="topic"></param>
         </member>
         <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.PublishTo``1(XSockets.Core.Common.Socket.IXSocketController,System.Func{``0,System.Boolean},XSockets.Core.Common.Socket.Event.Interface.IMessage)">
@@ -1603,6 +1676,24 @@
             <param name="expression"></param>
             <param name="obj"></param>
             <param name="topic"></param>
+        </member>
+        <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.PublishTo``1(XSockets.Core.Common.Socket.IXSocketController,System.Func{``0,System.Boolean},System.String)">
+            <summary>
+            Will send a message to clients connected to T that match the expression.
+            </summary>
+            <typeparam name="T">The IXSocketController T to target</typeparam>
+            <param name="controller">IXSocketController that invokes the extension</param>
+            <param name="expression"></param>
+            <param name="topic">Name of method to invoke on the clients</param>
+        </member>
+        <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.PublishTo``1(``0,System.Func{``0,System.Boolean},System.String)">
+            <summary>
+            Will send a message to clients connected to T that match the expression.
+            </summary>
+            <typeparam name="T">The IXSocketController T to target</typeparam>
+            <param name="controller">IXSocketController that invokes the extension</param>
+            <param name="expression"></param>
+            <param name="topic">Name of method to invoke on the clients</param>
         </member>
         <member name="M:XSockets.Core.XSocket.Helpers.XSocketHelper.PublishTo``1(``0,System.Func{``0,System.Boolean},XSockets.Core.Common.Socket.Event.Interface.IMessage)">
             <summary>
@@ -1743,6 +1834,47 @@
             <param name="data">The binary data to send</param>
             <param name="topic"></param>
         </member>
+        <member name="T:XSockets.Core.XSocket.License.LicenseTerms">
+            <summary>
+            terms of the license agreement: it's not encrypted (but is obscured)
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.XSocket.License.LicenseTerms.LicenseType">
+            <summary>
+            Type of license
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.XSocket.License.LicenseTerms.OfflineLicense">
+            <summary>
+            If true we check all parameters without validating with our server
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.XSocket.License.LicenseTerms.Scaling">
+            <summary>
+            Do we allow scaling?
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.XSocket.License.LicenseTerms.ConnectionLimit">
+            <summary>
+            How many concurrent connection is allowed?
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.XSocket.License.LicenseTerms.StartDate">
+            <summary>
+            Start date of the license agreement.
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.XSocket.License.LicenseTerms.EndDate">
+            <summary>
+            the last date on which the software can be used on this license.
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.XSocket.License.LicenseTerms.OwnerName">
+            <summary>
+            registered user name for the license agreement.
+            Can be developer name or company name
+            </summary>
+        </member>
         <member name="T:XSockets.Core.XSocket.DelegateInfo">
             <summary>
             For speeding up invokes in the server
@@ -1795,6 +1927,18 @@
             <summary>
             Do not invoke this. XSockets uses it after handshake etc
             </summary>
+        </member>
+        <member name="M:XSockets.Core.XSocket.XSocketController.HandleError(System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:XSockets.Core.XSocket.XSocketController.Send(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
         </member>
         <member name="M:XSockets.Core.XSocket.XSocketController.InvokeAuthorizationFailed(System.String)">
             <summary>
@@ -1867,6 +2011,26 @@
             </summary>
             <param name="storage"></param>
         </member>
+        <member name="P:XSockets.Core.XSocket.XSocketController.AuthorizeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.XSocket.XSocketController.AuthorizeOnMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.XSocket.XSocketController.AuthorizeAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.XSocket.XSocketController.Delegates">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="P:XSockets.Core.XSocket.XSocketController.Subscriptions">
             <summary>
             All subscriptions for the client
@@ -1898,6 +2062,16 @@
             <summary>
             The persistent id for the protocol instance of this connection
             </summary>        
+        </member>
+        <member name="P:XSockets.Core.XSocket.XSocketController.CorrectController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.XSocket.XSocketController.ProtocolInstance">
+            <summary>
+            
+            </summary>
         </member>
         <member name="E:XSockets.Core.XSocket.XSocketController.OnOpen">
             <summary>
@@ -1990,6 +2164,15 @@
             For newtonsoft.json
             </summary>
         </member>
+        <member name="M:XSockets.Core.XSocket.Model.Message.#ctor(System.Collections.Generic.IList{System.Byte},XSockets.Core.Common.Socket.Event.Arguments.MessageType,XSockets.Core.Common.Utility.Serialization.IXSocketJsonSerializer,System.String)">
+            <summary>
+            Ctor for binary message
+            </summary>
+            <param name="blob"></param>
+            <param name="messageType"></param>
+            <param name="serializer"></param>
+            <param name="controller"></param>
+        </member>
         <member name="M:XSockets.Core.XSocket.Model.Message.#ctor(System.Collections.Generic.IList{System.Byte},XSockets.Core.Common.Socket.Event.Arguments.MessageType,System.String)">
             <summary>
             
@@ -2044,12 +2227,21 @@
         </member>
         <member name="M:XSockets.Core.XSocket.Model.Message.#ctor(System.Object,System.String,System.String,XSockets.Core.Common.Utility.Serialization.IXSocketJsonSerializer)">
             <summary>
-            
+            Ctor for object based message
             </summary>
             <param name="obj"></param>
             <param name="topic"></param>
             <param name="controller"></param>
             <param name="serializer"></param>
+        </member>
+        <member name="M:XSockets.Core.XSocket.Model.Message.#ctor(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Ctor for string based message
+            </summary>
+            <param name="obj"></param>
+            <param name="topic"></param>
+            <param name="controller"></param>
+            <param name="isJson"></param>
         </member>
         <member name="M:XSockets.Core.XSocket.Model.Message.ToString">
             <summary>
@@ -2063,7 +2255,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:XSockets.Core.XSocket.Model.Message.getBytes">
+        <member name="M:XSockets.Core.XSocket.Model.Message.GetBytes">
             <summary>
             
             </summary>
@@ -2199,7 +2391,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:XSockets.Core.Utility.Observables.XSocketsObserverPool`2.Subscribe(`0,System.Action,System.Action,System.Action)">
+        <member name="M:XSockets.Core.Utility.Observables.XSocketsObserverPool`2.Subscribe(`0,System.Action,System.Action,System.Action{System.Exception})">
             <summary>
             Start a new subscription with actions for the events
             </summary>
@@ -2208,7 +2400,7 @@
             <param name="onCompletedAction"></param>
             <param name="onErrorAction"></param>
         </member>
-        <member name="M:XSockets.Core.Utility.Observables.XSocketsObserverPool`2.Subscribe(`0,System.Action{`1},System.Action{`1},System.Action{`1})">
+        <member name="M:XSockets.Core.Utility.Observables.XSocketsObserverPool`2.Subscribe(`0,System.Action{`1},System.Action{`1},System.Action{System.Exception})">
             <summary>
             Start a new subscription with actions for the events
             </summary>
@@ -2263,6 +2455,31 @@
             Will be called from the Observers Subscribe method
             Will notify the Observer when 
             </summary>
+        </member>
+        <member name="T:XSockets.Core.XSocket.Helpers.Wildcard">
+            <summary>
+            For parsing wildcards 
+            </summary>
+        </member>
+        <member name="M:XSockets.Core.XSocket.Helpers.Wildcard.#ctor(System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="pattern"></param>
+        </member>
+        <member name="M:XSockets.Core.XSocket.Helpers.Wildcard.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="pattern"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:XSockets.Core.XSocket.Helpers.Wildcard.WildcardToRegex(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="pattern"></param>
+            <returns></returns>
         </member>
         <member name="T:XSockets.Core.XSocket.Model.XStorage">
             <summary>
@@ -2356,6 +2573,11 @@
             Authorization needed?
             </summary>
         </member>
+        <member name="P:XSockets.Core.XSocket.Event.PluginCustomEventInfo.ReturnsTask">
+            <summary>
+            Flag for knowing if to wait for result and send back to client
+            </summary>
+        </member>
         <member name="P:XSockets.Core.XSocket.Event.PluginCustomEventInfo.AuthorizeAttribute">
             <summary>
             The Authorize attribute set (if any)
@@ -2364,6 +2586,43 @@
         <member name="T:XSockets.Core.XSocket.Wrapper.SocketWrapper">
             <summary>
             Handles socket communication
+            </summary>
+        </member>
+        <member name="M:XSockets.Core.XSocket.Wrapper.SocketWrapper.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="M:XSockets.Core.XSocket.Wrapper.SocketWrapper.#ctor(System.Net.Sockets.Socket)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="socket"></param>
+        </member>
+        <member name="M:XSockets.Core.XSocket.Wrapper.SocketWrapper.#ctor(System.Net.Sockets.Socket,System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            Ctor for SSL
+            </summary>
+            <param name="socket"></param>
+            <param name="certificate2"></param>
+        </member>
+        <member name="M:XSockets.Core.XSocket.Wrapper.SocketWrapper.AuthenticateAsClient(System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            
+            </summary>
+            <param name="certificate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XSockets.Core.XSocket.Wrapper.SocketWrapper.EndSend(System.IAsyncResult)">
+            <summary>
+            
+            </summary>
+            <param name="asyncResult"></param>
+            <returns></returns>
+        </member>
+        <member name="P:XSockets.Core.XSocket.Wrapper.SocketWrapper.RemoteIpAddress">
+            <summary>
+            
             </summary>
         </member>
         <member name="T:XSockets.Core.XSocket.XSocketPipeline">

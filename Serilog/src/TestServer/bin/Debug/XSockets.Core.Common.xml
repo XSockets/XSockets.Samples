@@ -19,6 +19,21 @@
             The origins allowed to connect to the server
             </summary>
         </member>
+        <member name="P:XSockets.Core.Common.Configuration.IConfigurationSetting.CertificateSubjectDistinguishedName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.Common.Configuration.IConfigurationSetting.CertificateLocation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.Common.Configuration.IConfigurationSetting.Certificate">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="P:XSockets.Core.Common.Configuration.IConfigurationSetting.Endpoint">
             <summary>
             The exposed endpoint
@@ -81,6 +96,11 @@
             Handles controllers instances/creation
             </summary>
         </member>
+        <member name="M:XSockets.Core.Common.Factories.IXSocketFactory.GetPluginById(System.String)">
+            <summary>
+            All registered plugins
+            </summary>
+        </member>
         <member name="M:XSockets.Core.Common.Factories.IXSocketFactory.AddPlugin(XSockets.Core.Common.Socket.IXSocketController,XSockets.Plugin.Framework.Attributes.IXSocketMetadata)">
             <summary>
             Registers a plugin in the factory and also sets custom events if there is any.
@@ -108,11 +128,6 @@
             </summary>
             <param name="plugin"></param>
             <returns></returns>
-        </member>
-        <member name="P:XSockets.Core.Common.Factories.IXSocketFactory.Plugins">
-            <summary>
-            All registered plugins
-            </summary>
         </member>
         <member name="T:XSockets.Core.Common.Factories.IXSocketProtocolFactory">
             <summary>
@@ -180,7 +195,7 @@
             Constants for built-in messages
             </summary>
         </member>
-        <member name="F:XSockets.Core.Common.Globals.Constants.Messages.UnknownHandlerName">
+        <member name="F:XSockets.Core.Common.Globals.Constants.Messages.UnknownController">
             <summary>
             The message to send if a client tries to connect to a non-existing controller
             </summary>
@@ -427,6 +442,16 @@
             Protocolinformation - The value of the SecWebSocketKey HTTP header included in the opening handshake.
             </summary>
         </member>
+        <member name="P:XSockets.Core.Common.Protocol.IConnectionContext.SecWebSocketProtocols">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.Common.Protocol.IConnectionContext.SecWebSocketVersion">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="P:XSockets.Core.Common.Protocol.IConnectionContext.User">
             <summary>
             If authenticated this will hold the IPrincipal
@@ -543,7 +568,78 @@
             </summary>
             <param name="communicate">if false is passed in there will be no coomunication over the socket</param>
         </member>
-        <member name="M:XSockets.Core.Common.Protocol.IXSocketProtocol.OnIncomingFrame(System.Collections.Generic.List{System.Byte},XSockets.Core.Common.Socket.Event.Arguments.MessageType)">
+        <member name="M:XSockets.Core.Common.Protocol.IXSocketProtocol.Read">
+            <summary>
+            Read another chunk of data from the socket into the buffer
+            </summary>
+        </member>
+        <member name="M:XSockets.Core.Common.Protocol.IXSocketProtocol.NewInstance">
+            <summary>
+            Get a new instance of the protocol
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XSockets.Core.Common.Protocol.IXSocketProtocol.Create(System.Action{System.Collections.Generic.IList{System.Byte},XSockets.Core.Common.Protocol.FrameType})">
+            <summary>
+            Setup the method for frame handling
+            </summary>
+            <param name="onCompleted"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XSockets.Core.Common.Protocol.IXSocketProtocol.ReceiveData(System.ArraySegment{System.Byte},XSockets.Core.Common.Protocol.IReadState,System.Action{XSockets.Core.Common.Protocol.FrameType,System.Collections.Generic.IList{System.Byte}})">
+            <summary>
+            Process the chunk that was read from the socket
+            </summary>
+            <param name="data"></param>
+            <param name="readState"></param>
+            <param name="processFrame"></param>
+        </member>
+        <member name="M:XSockets.Core.Common.Protocol.IXSocketProtocol.ProcessFrame(XSockets.Core.Common.Protocol.FrameType,System.Collections.Generic.IList{System.Byte},System.Action{System.Collections.Generic.IList{System.Byte},XSockets.Core.Common.Protocol.FrameType})">
+            <summary>
+            Process a complete frame
+            </summary>
+            <param name="frameType"></param>
+            <param name="data"></param>
+            <param name="competed"></param>
+        </member>
+        <member name="M:XSockets.Core.Common.Protocol.IXSocketProtocol.Receive(System.Byte[],System.Action{System.Int32},System.Action{System.Exception},System.Int32)">
+            <summary>
+            The actual read from the socket
+            </summary>
+            <param name="buffer"></param>
+            <param name="callback"></param>
+            <param name="error"></param>
+            <param name="offset"></param>
+        </member>
+        <member name="M:XSockets.Core.Common.Protocol.IXSocketProtocol.Send(System.Byte[],System.Action,System.Action{System.Exception})">
+            <summary>
+            Send data to the client
+            </summary>
+            <param name="buffer"></param>
+            <param name="callback"></param>
+            <param name="error"></param>
+        </member>
+        <member name="M:XSockets.Core.Common.Protocol.IXSocketProtocol.Close(System.Int32,System.Action,System.Action{System.Exception})">
+            <summary>
+            Close the connection
+            </summary>
+            <param name="reason"></param>
+            <param name="callback"></param>
+            <param name="error"></param>
+        </member>
+        <member name="M:XSockets.Core.Common.Protocol.IXSocketProtocol.Ping(System.Byte[])">
+            <summary>
+            Send a ping control frame
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:XSockets.Core.Common.Protocol.IXSocketProtocol.Pong(System.Byte[])">
+            <summary>
+            Send a pong control frame
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:XSockets.Core.Common.Protocol.IXSocketProtocol.OnIncomingFrame(System.Collections.Generic.IList{System.Byte},XSockets.Core.Common.Socket.Event.Arguments.MessageType)">
             <summary>
             Makes sure that what ever comes into the server is converted into a IMessage
             </summary>
@@ -557,6 +653,19 @@
             </summary>
             <param name="message"></param>
             <returns></returns>
+        </member>
+        <member name="M:XSockets.Core.Common.Protocol.IXSocketProtocol.InvokeMessageInterceptors(XSockets.Core.Common.Protocol.MessageDirection,XSockets.Core.Common.Socket.Event.Interface.IMessage)">
+            <summary>
+            Pass the message to all message interceptors (if any)
+            </summary>
+            <param name="direction"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:XSockets.Core.Common.Protocol.IXSocketProtocol.InvokeErrorInterceptors(System.Exception)">
+            <summary>
+            Pass the exception to all error interceptors (if any)
+            </summary>
+            <param name="ex"></param>
         </member>
         <member name="E:XSockets.Core.Common.Protocol.IXSocketProtocol.OnPong">
             <summary>
@@ -657,21 +766,6 @@
         <member name="T:XSockets.Core.Common.Protocol.IXWebSocketProtocol">
             <summary>
             The base-protocol for WebSockets
-            </summary>
-        </member>
-        <member name="T:XSockets.Core.Common.Protocol.ReadStatePosition">
-            <summary>
-            To know state of current read
-            </summary>
-        </member>
-        <member name="F:XSockets.Core.Common.Protocol.ReadStatePosition.Start">
-            <summary>
-            Read starting
-            </summary>
-        </member>
-        <member name="F:XSockets.Core.Common.Protocol.ReadStatePosition.InProgress">
-            <summary>
-            Read in progress
             </summary>
         </member>
         <member name="T:XSockets.Core.Common.Protocol.Rfc6455CloseReason">
@@ -826,10 +920,11 @@
             Receives/read frame-data
             </summary>
         </member>
-        <member name="T:XSockets.Core.Common.Protocol.IHybi00Protocol">
+        <member name="M:XSockets.Core.Common.Protocol.IXFrameHandler.Receive(System.ArraySegment{System.Byte})">
             <summary>
-            The old Hybi00 protocol
+            
             </summary>
+            <param name="data"></param>
         </member>
         <member name="T:XSockets.Core.Common.Protocol.IRfc6455Protocol">
             <summary>
@@ -856,19 +951,24 @@
             Type of frame
             </summary>
         </member>
-        <member name="P:XSockets.Core.Common.Protocol.IReadState.Size">
+        <member name="P:XSockets.Core.Common.Protocol.IReadState.MaskedBytes">
             <summary>
-            Frame size
+            Masking bytes
             </summary>
         </member>
-        <member name="P:XSockets.Core.Common.Protocol.IReadState.Processed">
+        <member name="P:XSockets.Core.Common.Protocol.IReadState.IsFinal">
             <summary>
-            How much is processed
+            Flag for final
             </summary>
         </member>
-        <member name="P:XSockets.Core.Common.Protocol.IReadState.ReadStatePosition">
+        <member name="P:XSockets.Core.Common.Protocol.IReadState.Length">
             <summary>
-            Current position
+            Size to read
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.Common.Protocol.IReadState.BufferedIndex">
+            <summary>
+            
             </summary>
         </member>
         <member name="T:XSockets.Core.Common.Socket.Attributes.AllowAnonymousAttribute">
@@ -944,6 +1044,11 @@
             </summary>
             <param name="frameType">A ping or pong</param>
             <param name="data">Data that ride along to be able to validate pings/pongs</param>
+        </member>
+        <member name="P:XSockets.Core.Common.Socket.Event.Arguments.ControlArgs.FrameType">
+            <summary>
+            A ping or a pong
+            </summary>
         </member>
         <member name="T:XSockets.Core.Common.Socket.Event.Arguments.MessageType">
             <summary>
@@ -1265,6 +1370,21 @@
             The controller connected to
             </summary>
         </member>
+        <member name="T:XSockets.Core.Common.Socket.IControllerWrapper">
+            <summary>
+            Wraps a controller by type
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.Common.Socket.IControllerWrapper.Controller">
+            <summary>
+            The XSockets controller
+            </summary>
+        </member>
+        <member name="P:XSockets.Core.Common.Socket.IControllerWrapper.Type">
+            <summary>
+            The underlying type of the controller
+            </summary>
+        </member>
         <member name="T:XSockets.Core.Common.Socket.IDelegateInfo">
             <summary>
             For speeding up invokes in the server
@@ -1556,6 +1676,14 @@
             <param name="topic">Name of the subscription</param>
             <returns>List of all subscribers</returns>
         </member>
+        <member name="M:XSockets.Core.Common.Socket.IXSocketController.GetSubscribersReadOnly``1(System.String)">
+            <summary>
+            Gets a copy of the current subsribers as a readonly list
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="topic"></param>
+            <returns></returns>
+        </member>
         <member name="P:XSockets.Core.Common.Socket.IXSocketController.Alias">
             <summary>
             The name used to connect to this controller
@@ -1837,6 +1965,36 @@
             To avoid dependencies to Serilog if you want to use another logger
             </summary>
         </member>
+        <member name="F:XSockets.Core.Common.Utility.Logging.LogEventLevel.Verbose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XSockets.Core.Common.Utility.Logging.LogEventLevel.Debug">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XSockets.Core.Common.Utility.Logging.LogEventLevel.Information">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XSockets.Core.Common.Utility.Logging.LogEventLevel.Warning">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XSockets.Core.Common.Utility.Logging.LogEventLevel.Error">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XSockets.Core.Common.Utility.Logging.LogEventLevel.Fatal">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:XSockets.Core.Common.Utility.MessageQueue.IOfflineQueue">
             <summary>
             The interface for handling offline messages in XSockets.
@@ -1991,6 +2149,28 @@
             
             </summary>
             <param name="value"></param>
+        </member>
+        <member name="M:XSockets.Core.Common.Utility.Observables.IXSocketObserver`2.Unsubscribe">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XSockets.Core.Common.Utility.Observables.IXSocketObserver`2.Subscribe(XSockets.Core.Common.Utility.Observables.IXSocketObservable{`0,`1})">
+            <summary>
+            
+            </summary>
+            <param name="provider"></param>
+        </member>
+        <member name="M:XSockets.Core.Common.Utility.Observables.IXSocketObserver`2.OnCompleted(`1)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:XSockets.Core.Common.Utility.Observables.IXSocketObserver`2.OnCompleted">
+            <summary>
+            
+            </summary>
         </member>
         <member name="P:XSockets.Core.Common.Utility.Observables.IXSocketObserver`2.Id">
             <summary>

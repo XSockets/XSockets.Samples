@@ -9,6 +9,17 @@
             Tell the plugin framework to ignore this class even if the interface implemented is an export
             </summary>
         </member>
+        <member name="T:XSockets.Plugin.Framework.Helpers.PluginHelpers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XSockets.Plugin.Framework.Helpers.PluginHelpers.GetAssemblyDirectory">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:XSockets.Plugin.Framework.Internals.AssemblyExtensions.GetActivationAttributes``1(System.Reflection.Assembly)">
             <summary>
             Return all the attributes of a given type from an assembly
