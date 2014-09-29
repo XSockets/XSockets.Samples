@@ -1,0 +1,7 @@
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\ScalingAndPerformanceSample\src\ScalingAndPerformanceSample.Clients\bin\Release\ScalingAndPerformanceSample.Clients.exe
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\ScalingAndPerformanceSample\src\ScalingAndPerformanceSample.Clients\bin\Release\ScalingAndPerformanceSample.Clients.pdb
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\ScalingAndPerformanceSample\src\ScalingAndPerformanceSample.Clients\bin\Release\Newtonsoft.Json.dll
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\ScalingAndPerformanceSample\src\ScalingAndPerformanceSample.Clients\bin\Release\XSockets.Client40.dll
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\ScalingAndPerformanceSample\src\ScalingAndPerformanceSample.Clients\obj\Release\ScalingAndPerformanceSample.Clients.csprojResolveAssemblyReference.cache
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\ScalingAndPerformanceSample\src\ScalingAndPerformanceSample.Clients\obj\Release\ScalingAndPerformanceSample.Clients.exe
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\ScalingAndPerformanceSample\src\ScalingAndPerformanceSample.Clients\obj\Release\ScalingAndPerformanceSample.Clients.pdb

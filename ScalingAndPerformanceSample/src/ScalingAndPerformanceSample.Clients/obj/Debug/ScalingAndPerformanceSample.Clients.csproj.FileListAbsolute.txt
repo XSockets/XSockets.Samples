@@ -1,0 +1,14 @@
+C:\Users\Uffe\Desktop\XSRC2\ScalingAndPerformanceSample\ScalingAndPerformanceSample.Clients\bin\Debug\ScalingAndPerformanceSample.Clients.exe
+C:\Users\Uffe\Desktop\XSRC2\ScalingAndPerformanceSample\ScalingAndPerformanceSample.Clients\bin\Debug\ScalingAndPerformanceSample.Clients.pdb
+C:\Users\Uffe\Desktop\XSRC2\ScalingAndPerformanceSample\ScalingAndPerformanceSample.Clients\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Uffe\Desktop\XSRC2\ScalingAndPerformanceSample\ScalingAndPerformanceSample.Clients\bin\Debug\XSockets.Client40.dll
+C:\Users\Uffe\Desktop\XSRC2\ScalingAndPerformanceSample\ScalingAndPerformanceSample.Clients\obj\Debug\ScalingAndPerformanceSample.Clients.csprojResolveAssemblyReference.cache
+C:\Users\Uffe\Desktop\XSRC2\ScalingAndPerformanceSample\ScalingAndPerformanceSample.Clients\obj\Debug\ScalingAndPerformanceSample.Clients.exe
+C:\Users\Uffe\Desktop\XSRC2\ScalingAndPerformanceSample\ScalingAndPerformanceSample.Clients\obj\Debug\ScalingAndPerformanceSample.Clients.pdb
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\ScalingAndPerformanceSample\src\ScalingAndPerformanceSample.Clients\obj\Debug\ScalingAndPerformanceSample.Clients.exe
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\ScalingAndPerformanceSample\src\ScalingAndPerformanceSample.Clients\obj\Debug\ScalingAndPerformanceSample.Clients.pdb
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\ScalingAndPerformanceSample\src\ScalingAndPerformanceSample.Clients\bin\Debug\ScalingAndPerformanceSample.Clients.exe
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\ScalingAndPerformanceSample\src\ScalingAndPerformanceSample.Clients\bin\Debug\ScalingAndPerformanceSample.Clients.pdb
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\ScalingAndPerformanceSample\src\ScalingAndPerformanceSample.Clients\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\ScalingAndPerformanceSample\src\ScalingAndPerformanceSample.Clients\bin\Debug\XSockets.Client40.dll
+C:\Users\Uffe\Documents\GitHub\XSockets.Samples\ScalingAndPerformanceSample\src\ScalingAndPerformanceSample.Clients\obj\Debug\ScalingAndPerformanceSample.Clients.csprojResolveAssemblyReference.cache

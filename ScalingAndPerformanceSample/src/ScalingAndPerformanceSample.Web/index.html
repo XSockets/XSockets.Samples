@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        .chart rect {
+            fill: #FF6600;
+        }
+
+        body {            
+            font: 12px sans-serif;            
+        }
+    </style>
+</head>
+    <body>
+        <div>New test: <span data-bind="text:testCount"></span> messages with size <span data-bind="text:testSize"></span></div>
+        <div><span data-bind="text:testReceived"></span> of <span data-bind="text:testCount"></span> - Total <span data-bind="text:testTotal"></span></div>
+        <svg class="chart"></svg>
+    
+        <div id="testdata">
+            <div>Number of Messages <span id="messages"></span></div>
+            <div>
+                <input type="range" min="10" max="1000" step="10" data-bind="value:testCount" id="numOfMessages"/><span data-bind="text:testCount"></span>
+            </div>
+            <div>Message Size</div>
+            <div>
+                <input type="range" min="1" max="1000" step="10" data-bind="value:testSize" id="sizeOfMessages" /><span data-bind="text:testSize"></span>
+            </div>
+            <div>Intervall (delay between messages being sent to server)</div>
+            <div>
+                <input type="range" min="0" max="1000" step="10" data-bind="value:testDelay" id="delayOfMessages" /><span data-bind="text:testDelay"></span>
+            </div>
+            <div>
+                <button>start test</button>
+            </div>
+        </div>
+    
+        
+        <script src="Scripts/d3.v3.min.js"></script>
+        <script src="Scripts/jquery-2.1.1.js"></script>
+        <script src="Scripts/knockout-3.2.0.js"></script>
+        <script src="Scripts/XSockets.latest.js"></script>
+
+        <script>
+        
+            var svg = d3.select(".chart");
+            var bar = svg.append("rect")
+                .attr("width", 0)
+                .attr("height", 60);
+            var conn;
+                  
+            //Test viewmodel
+            var vm = {
+                testCount: ko.observable(100),
+                testReceived : ko.observable(0),
+                testSize: ko.observable(1),
+                testTotal: ko.observable(0),
+                testDelay: ko.observable(30)
+            };
+
+            $(function () {
+                ko.applyBindings(vm);
+
+                conn = new XSockets.WebSocket('ws://127.0.0.1:4503', ['foo']);
+
+                var foo = conn.controller('foo');
+
+                foo.onopen = function() {                
+                    $('#testdata').fadeIn();
+                }
+                foo.onclose = function () {
+                    $('#testdata').fadeOut();
+                }
+
+                //A new test is about to start
+                foo.on('new', function (d) {
+                    vm.testCount(d.n);
+                    vm.testSize(d.s);
+                    vm.testReceived(0); 
+                    $('#testdata').fadeOut();
+                    bar.transition().attr("width", 0);                    
+                });
+
+                //A test message arrives
+                foo.on('m', function(d) {
+                    vm.testReceived(vm.testReceived()+1);                    
+                    bar.transition().attr("width", (vm.testReceived() / vm.testCount() * 100)*2);
+                    vm.testTotal(vm.testReceived() * 4000);
+                    if(vm.testReceived() == vm.testCount())
+                        $('#testdata').fadeIn();
+                });
+
+                //Start a new test
+                $('button').on('click', function(e) {
+                    e.preventDefault();
+                
+                    //Send info to all clients about a new test
+                    foo.invoke('new', { n: $('#numOfMessages').val(), s: $('#sizeOfMessages').val() });
+
+                    //Start test after 1 sec
+                    setTimeout(function () {
+                        //for (var i = 0; i < vm.testCount() ; i++) {
+                        var i = 0;
+                            var k = setInterval(function() {
+                                foo.invoke('m', { t: XSockets.Utils.randomString($('#sizeOfMessages').val()) });
+                                i++;
+                                if (i == vm.testCount())
+                                    clearInterval(k);
+                            }, vm.testDelay());
+                        //}
+                    }, 1000);
+                });
+            });
+        </script>
+    </body>
+</html>
